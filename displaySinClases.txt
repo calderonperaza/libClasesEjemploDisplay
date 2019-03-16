@@ -1,0 +1,163 @@
+#define boton 9
+int pinDisplay[]={2,3,4,5,6,7,8};
+int valor=0;
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(boton, INPUT);
+  //Serial.begin(9600);
+  for(int x=0; x<7; x++){
+    pinMode(pinDisplay[x],OUTPUT);
+  }
+  mostrar(valor);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+   
+  if(digitalRead(boton)==HIGH){
+    //Serial.println("entrando");
+    valor=valor+1;
+    if(valor>15){
+      valor=0;
+    }
+    delay(400);
+  }
+
+  mostrar(valor);
+
+}
+
+
+void mostrar(int num){
+  //Serial.println(num);
+  for(int x=0; x<7; x++){
+      digitalWrite(pinDisplay[x],LOW);
+    }
+
+  if(num==0){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    
+  }
+  if(num==1){
+   
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    
+  }
+  if(num==2){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==3){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+   digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==4){
+    
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+     
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==5){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+     
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==6){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==7){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    
+  }
+  if(num==8){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==9){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==10){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==11){
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==12){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    
+    
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    
+  }
+  if(num==13){
+    
+    digitalWrite(pinDisplay[1],HIGH); // B 
+    digitalWrite(pinDisplay[2],HIGH); // C 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+     
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+
+  if(num==14){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[3],HIGH); // D 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  if(num==15){
+    digitalWrite(pinDisplay[0],HIGH); // A 
+    digitalWrite(pinDisplay[4],HIGH); // E 
+    digitalWrite(pinDisplay[5],HIGH); // F 
+    digitalWrite(pinDisplay[6],HIGH); // G 
+  }
+  
+}
