@@ -1,3 +1,4 @@
 display  KEYWORD1
-propiedad1	KEYWORD2
+mostrar	KEYWORD2
+iniciar	KEYWORD2
 metodo1	KEYWORD3
