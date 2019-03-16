@@ -2,7 +2,7 @@
 definidos en el archivo de .H
 */
 
-#include "Arduino.h"
+#include "arduino.h"
 #include "libClasesEjemploDisplay.h"
 
 /* Ejemplo de un constructor de una clase
