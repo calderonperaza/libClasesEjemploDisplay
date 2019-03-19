@@ -153,17 +153,26 @@ void display::iniciar(byte a, byte b, byte c, byte d, byte e,byte f, byte g){
 
 }
 
-display::display(){
-
-}
-
 display::display(byte a, byte b, byte c, byte d, byte e,byte f, byte g){
-  iniciar(a,b,c,d,e,f,g);
+  	pinDisplay[0]=a;
+	pinDisplay[1]=b;
+	pinDisplay[2]=c;
+	pinDisplay[3]=d;
+	pinDisplay[4]=e;
+	pinDisplay[5]=f;
+	pinDisplay[6]=g;
+  for(byte x=0; x<sizeof(pinDisplay); x++){
+    pinMode(pinDisplay[x],OUTPUT);
+  }
+
 }
 
 
 display::display(byte arreglo[]){
-  iniciar(arreglo[0],arreglo[1],arreglo[2],arreglo[3],arreglo[4],arreglo[5],arreglo[6]);
+  display(arreglo[0],arreglo[1],arreglo[2],arreglo[3],arreglo[4],arreglo[5],arreglo[6]);
 
 } 
 
+display::display(){
+  
+}

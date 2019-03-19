@@ -15,7 +15,7 @@ class display{  //Se define la clase display recuerden ; al cierre de la llave
 		void iniciar(byte a, byte b, byte c, byte d, byte e,byte f, byte g);
 		display();
 		display(byte a, byte b, byte c, byte d, byte e,byte f, byte g);
-		display(byte arreglo[]);
+		display(byte []);
 		
 };
 
