@@ -11,7 +11,7 @@ class display{
 			byte pinDisplay[7];
 
     public:
-			void mostrar(byte &);
+			void mostrar(byte & );
 			display(byte (&arreglo)[7]);
 
 };
