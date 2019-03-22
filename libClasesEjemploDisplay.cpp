@@ -8,7 +8,10 @@ definidos en el archivo de .H
 
 display::display(byte *ptrArreglo){
   pinDisplay=ptrArreglo;
-  for(byte x=0; x<pinesMAX; x++){
+  
+  //para saber el final del arreglo, voy desplazando el puntero
+  //hasta que el mismo apunta a NULL ahi es donde termina el arreglo
+  for(byte x=0; *(pinDisplay+x)!=NULL; x++){
     /*Serial.print("forma de arreglo pines[x]=");
     Serial.println(pinDisplay[x]);
     Serial.print("forma de puntero *(pines+x)=");
@@ -21,7 +24,9 @@ display::display(byte *ptrArreglo){
 
 
 void display::mostrar(byte *num){
-  for(byte x=0; x<pinesMAX; x++){
+  //para saber el final del arreglo, voy desplazando el puntero
+  //hasta que el mismo apunta a NULL ahi es donde termina el arreglo
+  for(byte x=0; *(pinDisplay+x)!=NULL; x++){
     //accediendo como puntero
       digitalWrite(*(pinDisplay+x),LOW);
     }
