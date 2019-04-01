@@ -10,7 +10,7 @@ display::display(byte *ptrArreglo){
   pinDisplay=ptrArreglo;
   
   //para saber el final del arreglo, voy desplazando el puntero
-  //hasta que el mismo apunta a NULL ahi es donde termina el arreglo
+  //hasta que el contenido al que apunta tiene NULL ahi es donde termina el arreglo
   for(byte x=0; *(pinDisplay+x)!=NULL; x++){
     /*Serial.print("forma de arreglo pines[x]=");
     Serial.println(pinDisplay[x]);

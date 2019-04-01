@@ -9,11 +9,11 @@ Este archivo contendra la estructura de todas las clases de la libreria
 class display{  //Se define la clase display recuerden ; al cierre de la llave
     private:
 			byte *pinDisplay; //puntero que apunta a un arreglo de byte
-			const byte pinesMAX=7; //necesitamos la variable para saber el final
+			
     public:
 		
 		void mostrar(byte *);
-		display(byte *);
+		display(byte *); //recibira un puntero a un arreglo que debe ser de 7 elementos
 		
 		
 };
