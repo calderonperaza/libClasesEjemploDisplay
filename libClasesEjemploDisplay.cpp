@@ -30,7 +30,7 @@ void display::mostrar(byte *num){
     //accediendo como puntero
       digitalWrite(*(pinDisplay+x),LOW);
     }
-
+    
   if(*num==0){
     //Accediendo como puntero
     digitalWrite(*pinDisplay,HIGH);     // A 
